@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="Parithon.Aspire.Hosting.Authentik.csproj" />
+  <Project Path="src\Parithon.Aspire.Hosting.Authentik.csproj" />
+  <Project Path="tests\Parithon.Aspire.Hosting.Authentik.Tests\Parithon.Aspire.Hosting.Authentik.Tests.csproj" />
 </Solution>
