@@ -12,13 +12,14 @@
     <RepositoryUrl>https://github.com/parithon/Parithon.Aspire.Hosting.Authentik</RepositoryUrl>
     <PackageProjectUrl>https://github.com/parithon/Parithon.Aspire.Hosting.Authentik</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting" Version="13.2.4" />
     <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="13.2.4" />
     <PackageReference Include="Aspire.Hosting.Redis" Version="13.2.4" />
+    <PackageReference Include="MinVer" Version="7.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
