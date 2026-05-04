@@ -1,4 +1,5 @@
 using Aspire.Hosting.ApplicationModel;
+using static Parithon.Aspire.Hosting.Authentik.AuthentikContainerImageTags;
 
 namespace Aspire.Hosting;
 
@@ -21,11 +22,13 @@ public static class AuthentikResourceBuilderExtensions
 
     var authentik = builder
       .AddResource(resource)
-      .WithImage(AuthentikContainerImageTags.Image)
-      .WithImageRegistry(AuthentikContainerImageTags.Registry)
-      .WithImageTag(AuthentikContainerImageTags.Tag)
+      .WithImage(Image)
+      .WithImageRegistry(Registry)
+      .WithImageTag(Tag)
       .WithHttpEndpoint(port: port, targetPort: DefaultContainerPort)
       .WithHttpEndpoint(targetPort: ManagementInterfaceContainerPort, name: ManagementEndpointName)
       .WithEndpoint(ManagementEndpointName, e => e.ExcludeReferenceEndpoint = true);
+
+    return authentik;
   }
 }
